@@ -6,6 +6,9 @@
 #include <memory>
 #include <string>
 #include "./factory.h"
+#include "./product1.h"
+#include "./product2.h"
+#include "./product3.h"
 
 #pragma once
 
@@ -17,6 +20,10 @@ class abstract_factory_client {
     std::string showProduct1();
     std::string showProduct2();
     std::string showProduct3();
+
+    std::shared_ptr<product1> makeProduct1();
+    std::shared_ptr<product2> makeProduct2();
+    std::shared_ptr<product3> makeProduct3();
 
  private:
     std::shared_ptr<factory> myFactory;
